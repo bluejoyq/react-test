@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
+const App = () => {
+  const [query, setQuery] = useState('');
+
+  const changeQuery = (event) => {
+    setQuery(event.target.value);
+  }
+
+  const isEnter = (event) => {
+    if (event.key === "Enter")
+			searchQuery();
+  }
+
+  const searchQuery = () => {
+    // do search with query
+    setQuery('');
+    
+    // init input value
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <input value = {query} onChange={changeQuery} 
+        onKeyDown={isEnter}/>
+      <button onClick={searchQuery}>검색</button>
     </div>
-  );
+  )
 }
 
 export default App;
