@@ -11,7 +11,7 @@ export const drop = () => ({
 });
 
 export const initialState = {
-	isVisible: 0,
+	isVisible: false,
 	content: null
 };
 
@@ -19,12 +19,12 @@ const modal = (state=initialState, action) => {
 	switch (action.type) {
 		case SHOW:
 			return { 
-				isVisible : 1,
+				isVisible : true,
         content: action.payload
 			};
     case DROP:
       return {
-        isVisible: 0,
+        isVisible: false,
         content: null
       };
 		default:

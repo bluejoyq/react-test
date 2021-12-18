@@ -25,7 +25,7 @@ const Modal = ({isVisible, content, drop}) => {
 
 	return (
 		<>
-		{isVisible &&
+		{isVisible && 
 		<div className={styles.modalContainer}>
 			<div className={styles.closeBar}>
 				<button onClick={drop}>XXXX</button>

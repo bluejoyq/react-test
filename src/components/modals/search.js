@@ -17,6 +17,7 @@ const Search = ({drop}) => {
     drop();
     // init input value
   }
+  
   return(
 	<div>
     <input value = {query} onChange={changeQuery} 

@@ -1,12 +1,19 @@
 import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import {show} from './store/reducers/modal';
 import Modal from './components/modal';
+import OpenModalWithPortal  from './components/openModalWithPortal';
 const App = ({isVisible, show}) => {
+  
+
   return (
     <>
-      <button onClick={()=>{show('search');}}>검색창 열기</button>
+      <button onClick={()=>{show('search');}}>Redux로 검색창 열기</button>
+      <div id='modal'></div>
+      
       <Modal/>
+      <OpenModalWithPortal/>
     </>
   )
 }
