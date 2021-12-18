@@ -18,10 +18,10 @@ const App = ({isVisible, show}) => {
   )
 }
 const mapStateToProps = (state) => ({
-	isVisible: state.modal.isVisible
+  isVisible: state.modal.isVisible
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	show: (content) => dispatch(show({content})),
+  show: (content) => dispatch(show({content})),
 });
 export default connect(mapStateToProps,mapDispatchToProps)(App);
